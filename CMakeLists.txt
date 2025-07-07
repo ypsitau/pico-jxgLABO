@@ -35,7 +35,7 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(pico-jxgLABO pico-jxgLABO.cpp )
+add_executable(pico-jxgLABO src/pico-jxgLABO.cpp )
 
 pico_set_program_name(pico-jxgLABO "pico-jxgLABO")
 pico_set_program_version(pico-jxgLABO "0.0.1")
@@ -60,6 +60,6 @@ target_link_libraries(pico-jxgLABO
     jxglib_LFS_Flash jxglib_FAT_Flash jxglib_RTC_DS323x
 	jxglib_USBDevice_MSCDrive jxglib_USBDevice_CDCSerial
     jxglib_ShellCmd_FS jxglib_ShellCmd_GPIO jxglib_ShellCmd_PWM jxglib_ShellCmd_I2C)
-add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/../pico-jxglib pico-jxglib)
+add_subdirectory(pico-jxglib)
 jxglib_configure_USBDevice(pico-jxgLABO CFG_TUD_CDC 1 CFG_TUD_MSC 1)
 jxglib_configure_FAT(pico-jxgLABO FF_VOLUMES 1)
