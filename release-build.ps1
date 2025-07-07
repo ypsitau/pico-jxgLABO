@@ -10,5 +10,9 @@ cmake --build build-pico --config Release
 cmake --build build-pico2 --config Release
 echo "------------------------------------------------------"
 picotool info -a build-pico/pico-jxgLABO.elf
+copy build-pico/pico-jxgLABO.uf2 release/pico-jxgLABO.uf2
 echo "------------------------------------------------------"
 picotool info -a build-pico2/pico-jxgLABO.elf
+copy build-pico2/pico-jxgLABO.uf2 release/pico2-jxgLABO.uf2
+echo ""
+echo "created: release/pico-jxgLABO.uf2 release/pico2-jxgLABO.uf2"
