@@ -6,6 +6,10 @@
 
 using namespace jxglib;
 
+const char* text_Readme = R"(Welcome to pico-jxgLABO!
+Type 'help' in the shell to see available commands.
+)";
+
 int main(void)
 {
 	USBDevice::Controller deviceController({
@@ -19,7 +23,11 @@ int main(void)
 		bcdDevice:			0x0100,
 	}, 0x0409, "jxglib", "pico-jxgLABO", "000000000000");
 	FAT::Flash fat("*G:", PICO_FLASH_SIZE_BYTES - 0x010'0000);	// allocate 1MB at the end of the flash memory
-	if (!fat.Mount()) fat.Format();
+	if (!fat.Mount()) {
+		fat.Format();
+		std::unique_ptr<FS::File> pFile(fat.OpenFile("README.txt", "w"));
+		if (pFile) pFile->Print(text_Readme);
+	}
 	USBDevice::MSCDrive mscDrive(deviceController, 0x01, 0x81);
 	USBDevice::CDCSerial cdcSerial(deviceController, "CDCSerial", 0x82, 0x03, 0x83);
 	deviceController.Initialize();
