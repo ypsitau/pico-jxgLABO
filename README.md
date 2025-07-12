@@ -6,7 +6,7 @@ This is a project for Raspberry Pi Pico that provides a command-line interface t
 
 ## Environment
 
-- Raspberry Pi Pico
+- Raspberry Pi Pico or Pico2
 - Visual Studio Code (installed with Raspberry Pi Pico extension)
 - Termimal emulator (e.g., PuTTY, Tera Term)
 
@@ -23,7 +23,7 @@ In the Visual Studio Code, open the command palette (Ctrl+Shift+P) and select "C
 
 ## How to run
 
-Connect your Raspberry Pi Pico to your computer while holding down the BOOTSEL button. This will mount the Pico as a mass storage device. If you are using Windows, it will appear as a drive (e.g., D:). Once mounted, you can copy the generated binary to the Pico:
+Connect your Raspberry Pi Pico to your computer's USB port while holding down the BOOTSEL button. This will mount the Pico as a mass storage device. If you are using Windows, it will appear as a drive (e.g., D:). Once mounted, you can copy the generated binary to the Pico:
 
 ```bash
 copy build/pico-jxgLABO.uf2 D:
