@@ -43,8 +43,17 @@ Typing `help` will display a list of available commands:
 
 ```text
 G:/>help
-about-me
-about-platform
+.               executes the given script file
+about-me        prints information about this own program
+about-platform  prints information about the platform
+adc             controls ADC (Analog-to-Digital Converter)
+adc0            controls ADC (Analog-to-Digital Converter)
+adc1            controls ADC (Analog-to-Digital Converter)
+adc2            controls ADC (Analog-to-Digital Converter)
+adc3            controls ADC (Analog-to-Digital Converter)
+adc4            controls ADC (Analog-to-Digital Converter)
+cat             prints the contents of files
+cd              changes the current directory
 ...
 ```
 
@@ -58,4 +67,12 @@ The following is an example of blinking an LED connected to GPIO 15:
 
 ```text
 G:/>gpio15 func:sio dir:out repeat { toggle sleep:300 }
+```
+
+Ctrl-C can be used to stop the command execution.
+
+The following command will control PWM on GPIO 15 with a frequency of 1000 Hz and a duty cycle of 50%:
+
+```text
+G:/>pwm15 func:pwm enable freq:1000 duty:.5
 ```
