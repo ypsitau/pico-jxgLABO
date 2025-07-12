@@ -1,40 +1,16 @@
-#include "jxglib/Shell.h"
-#include "jxglib/Serial.h"
-#include "jxglib/USBDevice/MSCDrive.h"
-#include "jxglib/USBDevice/CDCSerial.h"
-#include "jxglib/FAT/Flash.h"
+//=============================================================================
+// pico-jxgLABO
+//=============================================================================
+#include "jxglib/LABOPlatform.h"
 
 using namespace jxglib;
 
-const char* text_Readme = R"(Welcome to pico-jxgLABO!
-Type 'help' in the shell to see available commands.
-)";
+LABOPlatform laboPlatform;
 
 int main(void)
 {
-	USBDevice::Controller deviceController({
-		bcdUSB:				0x0200,
-		bDeviceClass:		TUSB_CLASS_MISC,
-		bDeviceSubClass:	MISC_SUBCLASS_COMMON,
-		bDeviceProtocol:	MISC_PROTOCOL_IAD,
-		bMaxPacketSize0:	CFG_TUD_ENDPOINT0_SIZE,
-		idVendor:			0xcafe,
-		idProduct:			USBDevice::GenerateSpecificProductId(0x4000),
-		bcdDevice:			0x0100,
-	}, 0x0409, "jxglib", "pico-jxgLABO", "000000000000");
-	FAT::Flash fat("*G:", PICO_FLASH_SIZE_BYTES - 0x010'0000);	// allocate 1MB at the end of the flash memory
-	if (!fat.Mount()) {
-		fat.Format();
-		std::unique_ptr<FS::File> pFile(fat.OpenFile("README.txt", "w"));
-		if (pFile) pFile->Print(text_Readme);
-	}
-	USBDevice::MSCDrive mscDrive(deviceController, 0x01, 0x81);
-	USBDevice::CDCSerial cdcSerial(deviceController, "CDCSerial", 0x82, 0x03, 0x83);
-	deviceController.Initialize();
-	mscDrive.Initialize(fat);
-	cdcSerial.Initialize();
-	Serial::Terminal terminal;
-	terminal.AttachKeyboard(cdcSerial.GetKeyboard()).AttachPrintable(cdcSerial);
-	Shell::AttachTerminal(terminal.Initialize());
+	laboPlatform.Initialize();
+	::adc_init();
+	::adc_set_temp_sensor_enabled(true);
 	for (;;) Tickable::Tick();
 }
