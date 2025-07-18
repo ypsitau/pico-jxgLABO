@@ -56,13 +56,6 @@ target_include_directories(pico-jxgLABO PRIVATE
 pico_add_extra_outputs(pico-jxgLABO)
 
 target_link_libraries(pico-jxgLABO
-    jxglib_LABOPlatform
-    jxglib_ShellCmd_FS
-    jxglib_ShellCmd_GPIO
-    jxglib_ShellCmd_ADC
-    jxglib_ShellCmd_PWM
-    jxglib_ShellCmd_I2C
-    jxglib_ShellCmd_SPI
-)
+    jxglib_LABOPlatform_FullCmd)
 add_subdirectory(pico-jxglib)
 jxglib_configure_LABOPlatform(pico-jxgLABO)
