@@ -4,7 +4,7 @@
 
 This is a project for Raspberry Pi Pico that provides a command-line interface to control GPIO, ADC, PWM, I2C, and SPI functionalities. It is designed to work with the jxglib library, which is a C++ library for embedded systems that provides a set of tools to easily manage hardware components.
 
-![pico-and-pico2.jpg](/images/pico-and-pico2.jpg)
+![pico-and-pico2.jpg](/pico-jxgLABO/images/pico-and-pico2.jpg)
 
 ## Environment
 
