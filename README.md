@@ -31,13 +31,13 @@ After copying the binary, the Pico will reboot and start running the program.
 Once the Pico is running, you can connect to it using a terminal emulator. Set the serial port to the appropriate COM port (e.g., COM7) and the baud rate to 115200. You will see a command prompt like this:
 
 ```text
-G:/>
+L:/>
 ```
 
 Typing `help` will display a list of available commands:
 
 ```text
-G:/>help
+L:/>help
 .               executes the given script file
 about-me        prints information about this own program
 about-platform  prints information about the platform
@@ -55,13 +55,13 @@ cd              changes the current directory
 The following command will set GPIO15 to output mode and turn it on:
 
 ```text
-G:/>gpio15 func:sio dir:out put:1
+L:/>gpio15 func:sio dir:out put:1
 ```
 
 The following is an example of blinking an LED connected to GPIO 15:
 
 ```text
-G:/>gpio15 func:sio dir:out repeat { toggle sleep:300 }
+L:/>gpio15 func:sio dir:out repeat { toggle sleep:300 }
 ```
 
 Ctrl-C can be used to stop the command execution.
@@ -69,7 +69,7 @@ Ctrl-C can be used to stop the command execution.
 The following command will control PWM on GPIO 15 with a frequency of 1000 Hz and a duty cycle of 50%:
 
 ```text
-G:/>pwm15 func:pwm enable freq:1000 duty:.5
+L:/>pwm15 func:pwm enable freq:1000 duty:.5
 ```
 
 ## How to build
