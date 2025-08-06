@@ -10,6 +10,11 @@ This is a project for Raspberry Pi Pico that provides a command-line interface t
 - Visual Studio Code (installed with Raspberry Pi Pico extension)
 - Termimal emulator (e.g., PuTTY, Tera Term)
 
+## Let's try it out!
+
+[pico-jxgLABO.uf2](https://github.com/ypsitau/pico-jxgLABO/latest/releases/pico-jxgLABO.uf2)
+[pico2-jxgLABO.uf2](https://github.com/ypsitau/pico-jxgLABO/latest/releases/pico2-jxgLABO.uf2)
+
 ## How to build
 
 ```bash
