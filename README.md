@@ -4,35 +4,25 @@
 
 This is a project for Raspberry Pi Pico that provides a command-line interface to control GPIO, ADC, PWM, I2C, and SPI functionalities. It is designed to work with the jxglib library, which is a C++ library for embedded systems that provides a set of tools to easily manage hardware components.
 
+![pico-and-pico2.jpg](/images/2025-08-01-labo-intro/pico-and-pico2.jpg)
+
 ## Environment
 
 - Raspberry Pi Pico or Pico2
+- Terminal emulator (e.g., Tera Term, PuTTY)
+
+If you want to customize the source code, you will also need:
+
 - Visual Studio Code (installed with Raspberry Pi Pico extension)
-- Termimal emulator (e.g., PuTTY, Tera Term)
 
-## Let's try it out!
+## How to install
 
-[pico-jxgLABO.uf2](https://github.com/ypsitau/pico-jxgLABO/latest/releases/pico-jxgLABO.uf2)
-[pico2-jxgLABO.uf2](https://github.com/ypsitau/pico-jxgLABO/latest/releases/pico2-jxgLABO.uf2)
+Download the latest release of the binary file for your Raspberry Pi Pico from the following links:
 
-## How to build
-
-```bash
-git clone https://github.com/ypsitau/pico-jxgLABO.git
-cd pico-jxgLABO
-git submodule update --init --recursive
-code .
-```
-
-In the Visual Studio Code, open the command palette (Ctrl+Shift+P) and select "CMake: Build". This will compile the project and generate a binary file in the `build` directory.
-
-## How to run
+- For Pico ... [pico-jxgLABO.uf2](https://github.com/ypsitau/pico-jxgLABO/releases/latest/download/pico-jxgLABO.uf2)
+- For Pico 2 ... [pico2-jxgLABO.uf2](https://github.com/ypsitau/pico-jxgLABO/releases/latest/download/pico2-jxgLABO.uf2)
 
 Connect your Raspberry Pi Pico to your computer's USB port while holding down the BOOTSEL button. This will mount the Pico as a mass storage device. If you are using Windows, it will appear as a drive (e.g., D:). Once mounted, you can copy the generated binary to the Pico:
-
-```bash
-copy build/pico-jxgLABO.uf2 D:
-```
 
 After copying the binary, the Pico will reboot and start running the program.
 
@@ -81,3 +71,14 @@ The following command will control PWM on GPIO 15 with a frequency of 1000 Hz an
 ```text
 G:/>pwm15 func:pwm enable freq:1000 duty:.5
 ```
+
+## How to build
+
+```bash
+git clone https://github.com/ypsitau/pico-jxgLABO.git
+cd pico-jxgLABO
+git submodule update --init --recursive
+code .
+```
+
+In the Visual Studio Code, open the command palette (Ctrl+Shift+P) and select "CMake: Build". This will compile the project and generate a binary file in the `build` directory.
