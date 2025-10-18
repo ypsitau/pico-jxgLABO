@@ -1,5 +1,7 @@
 build
 build-pico
 build-pico2
+build-pico-w
+build-pico2-w
 .vscode/*
 release/*.uf2
