@@ -14,10 +14,10 @@ cmake -S . -B build-pico -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DPICO_BOARD=pico
 cmake -S . -B build-pico2 -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DPICO_BOARD=pico2
 cmake -S . -B build-pico-w -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DPICO_BOARD=pico_w
 cmake -S . -B build-pico2-w -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DPICO_BOARD=pico2_w
-cmake --build build-pico --config Release
-cmake --build build-pico2 --config Release
-cmake --build build-pico-w --config Release
-cmake --build build-pico2-w --config Release
+cmake --build build-pico --config Release --parallel
+cmake --build build-pico2 --config Release --parallel
+cmake --build build-pico-w --config Release --parallel
+cmake --build build-pico2-w --config Release --parallel
 #echo "------------------------------------------------------"
 #picotool info -a build-pico/pico-jxgLABO.elf
 copy build-pico/pico-jxgLABO.uf2 release/pico-jxgLABO.uf2
