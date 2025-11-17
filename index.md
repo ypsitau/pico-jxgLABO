@@ -1,15 +1,13 @@
 ---
 layout: default
-title: Home
+title: pico-jxgLABO
 ---
-
-# pico-jxgLABO
 
 ## What's this?
 
 This is a project for Raspberry Pi Pico that provides a command-line interface to control GPIO, ADC, PWM, I2C, and SPI functionalities. It is designed to work with the jxglib library, which is a C++ library for embedded systems that provides a set of tools to easily manage hardware components.
 
-![pico-and-pico2.jpg](images/pico-and-pico2.jpg)
+![pico-and-pico2.jpg](/images/pico-and-pico2.jpg)
 
 ## Environment
 
@@ -27,7 +25,7 @@ Download the latest release of the binary file for your Raspberry Pi Pico from t
 - For Pico ... [pico-jxgLABO.uf2](https://github.com/ypsitau/pico-jxgLABO/releases/latest/download/pico-jxgLABO.uf2)
 - For Pico 2 ... [pico2-jxgLABO.uf2](https://github.com/ypsitau/pico-jxgLABO/releases/latest/download/pico2-jxgLABO.uf2)
 
-Connect your Raspberry Pi Pico to your computer's USB port while holding down the BOOTSEL button. This will mount the Pico as a mass storage device. If you are using Windows, it will appear as a drive (e.g., D:). Once mounted, you can copy the generated binary to the Pico.
+Connect your Raspberry Pi Pico to your computer's USB port while holding down the BOOTSEL button. This will mount the Pico as a mass storage device. If you are using Windows, it will appear as a drive (e.g., D:). Once mounted, you can copy the generated binary to the Pico:
 
 After copying the binary, the Pico will reboot and start running the program.
 
@@ -39,16 +37,51 @@ Once the Pico is running, you can connect to it using a terminal emulator. Set t
 L:/>
 ```
 
-Type `help` to see available commands.
+Typing `help` will display a list of available commands:
 
-## Pages
+```text
+L:/>help
+.               executes the given script file
+about-me        prints information about this own program
+about-platform  prints information about the platform
+adc             controls ADC (Analog-to-Digital Converter)
+adc0            controls ADC (Analog-to-Digital Converter)
+adc1            controls ADC (Analog-to-Digital Converter)
+adc2            controls ADC (Analog-to-Digital Converter)
+adc3            controls ADC (Analog-to-Digital Converter)
+adc4            controls ADC (Analog-to-Digital Converter)
+cat             prints the contents of files
+cd              changes the current directory
+...
+```
 
-{% for file in site.static_files %}
-  {% if file.path contains '/pages/' and file.extname == '.md' %}
-- [{{ file.basename }}]({{ file.path | remove_first: '/' }})
-  {% endif %}
-{% endfor %}
+The following command will set GPIO15 to output mode and turn it on:
 
-## License
+```text
+L:/>gpio15 func:sio dir:out put:1
+```
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+The following is an example of blinking an LED connected to GPIO 15:
+
+```text
+L:/>gpio15 func:sio dir:out repeat { toggle sleep:300 }
+```
+
+Ctrl-C can be used to stop the command execution.
+
+The following command will control PWM on GPIO 15 with a frequency of 1000 Hz and a duty cycle of 50%:
+
+```text
+L:/>pwm15 func:pwm enable freq:1000 duty:.5
+```
+
+## How to build
+
+```bash
+git clone https://github.com/ypsitau/pico-jxgLABO.git
+cd pico-jxgLABO
+git submodule update --init --recursive
+code .
+```
+
+In the Visual Studio Code, open the command palette (Ctrl+Shift+P) and select "CMake: Build". This will compile the project and generate a binary file in the `build` directory.
