@@ -1,5 +1,5 @@
 title: pico-jxgLABO
 description: A command-line interface for Raspberry Pi Pico to control GPIO, ADC, PWM, I2C, and SPI functionalities
-#theme: jekyll-theme-cayman
+theme: jekyll-theme-cayman
 baseurl: "/pico-jxgLABO"
-url: "https://ypsitau.github.io"
+url: "https://ypsitau.github.io/pico-jxgLABO"
