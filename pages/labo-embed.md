@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Embedding pico-jxgLABO
+title: pico-jxgLABO
 ---
 
 # Grant Your Pico Board Programs Logic Analyzer and Network Capabilities! This is How to Embed pico-jxgLABO
