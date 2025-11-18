@@ -1,5 +1,7 @@
 # pico-jxgLABO
 
+[Guidance](https://ypsitau.github.io/pico-jxgLABO/)
+
 ## How to Build
 
 At first, clone this repository including submodules:
