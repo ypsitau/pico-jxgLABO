@@ -1,6 +1,6 @@
 # pico-jxgLABO
 
-[Guidance](https://ypsitau.github.io/pico-jxgLABO/)
+Introduction is [here](https://ypsitau.github.io/pico-jxgLABO/).
 
 ## How to Build
 
