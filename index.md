@@ -19,7 +19,7 @@ However, even with such abundant features, they're wasted without knowing how to
 - **File System Shared with Host PC**: Mount the Pico board's flash memory as a file system and share it with the host PC
 - **PC-like File Operations**: Perform PC-like file operations such as copying, deleting files, and creating directories
 
-**pico-jxgLABO** is not just an experimental platform. You can incorporate the rich features of pico-jxgLABO into any program by [adding just 3 lines of code](https://zenn.dev/ypsit/articles/2025-09-16-labo-embed). For example, you can use the logic analyzer function to debug programs running on the Pico board, monitor serial communication, and more. This is actually my main use case.
+**pico-jxgLABO** is not just an experimental platform. You can incorporate the rich features of pico-jxgLABO into any program by [adding just 3 lines of code](/pages/labo-embed). For example, you can use the logic analyzer function to debug programs running on the Pico board, monitor serial communication, and more. This is actually my main use case.
 
 ## How to Install pico-jxgLABO
 
