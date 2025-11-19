@@ -1,6 +1,6 @@
 # pico-jxgLABO
 
-Introduction is [here](https://ypsitau.github.io/pico-jxgLABO/).
+**pico-jxgLABO** is an experimental platform that allows you to actually try various functions on the Pico board. Details of the project can be found on the project page: https://ypsitau.github.io/pico-jxgLABO/.
 
 ## How to Build
 
