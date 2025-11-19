@@ -51,7 +51,7 @@ Launch Tera Term for serial communication. Select `[Setup (S)]` - `[Serial port 
 
 ![teraterm-setting-en.png](https://raw.githubusercontent.com/ypsitau/zenn/main/images/2025-08-01-labo-intro/teraterm-setting-en.png)
 
-pico-jxgLABO provides two serial ports. One is for the terminal, and the other is for applications such as logic analyzers and plotters. The first serial port provided (in the above example, `COM21`) is for the terminal. Select this and click `[New Open (N)]` or `[Reconfigure current connection (N)]`.
+pico-jxgLABO provides two serial ports. One is for the terminal, and the other is for applications such as logic analyzers and plotters. The first serial port provided (in the above example, `COM21`) is for the terminal. Select this and click `[New open]` or `[New setting]`.
 
 When you press `[Enter]` in the terminal, a prompt like this will appear:
 
