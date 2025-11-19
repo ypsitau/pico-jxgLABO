@@ -37,7 +37,7 @@ Install terminal software for serial communication on the host PC. The following
 
 1. Download one of the following UF2 files:
    |Pico Board Type|UF2 File|
-   |-|-|
+   |---------------|--------|
    |Pico     |[pico-jxgLABO.uf2](https://github.com/ypsitau/pico-jxgLABO/releases/latest/download/pico-jxgLABO.uf2)   |
    |Pico W   |[pico-w-jxgLABO.uf2](https://github.com/ypsitau/pico-jxgLABO/releases/latest/download/pico-w-jxgLABO.uf2) |
    |Pico 2   |[pico2-jxgLABO.uf2](https://github.com/ypsitau/pico-jxgLABO/releases/latest/download/pico2-jxgLABO.uf2)  |
