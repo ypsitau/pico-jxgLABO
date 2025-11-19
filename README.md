@@ -17,7 +17,8 @@ The easiest way to build is to use Visual Studio Code (VS Code) with Raspberry P
 ```bash
 $ code .
 ```
-Press `F7` key to build. After building, the UF2 file will be located in `build`.
+
+Press `F7` key to build. After building, executable files including UF2 file will be located in `build`.
 
 You can also build from the command line using CMake and Ninja.
 
