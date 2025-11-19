@@ -31,7 +31,7 @@ The equipment needed to use pico-jxgLABO is as follows:
 - Pico board (Pico, Pico 2, Pico W, Pico 2 W, etc.)
 - USB cable
 
-Install terminal software for serial communication on the host PC. The following instructions use a Windows PC as the host and [Tera Term](https://teratermproject.github.io/) as the terminal software.
+Install terminal software for serial communication on the host PC. The following instructions use a Windows PC as the host and [Tera Term](https://teratermproject.github.io/index-en.html) as the terminal software.
 
 ### Writing to the Pico Board
 
