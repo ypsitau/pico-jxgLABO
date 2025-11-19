@@ -36,12 +36,14 @@ Install terminal software for serial communication on the host PC. The following
 ### Writing to the Pico Board
 
 1. Download one of the following UF2 files:
+
    |Pico Board Type|UF2 File|
    |---------------|--------|
    |Pico     |[pico-jxgLABO.uf2](https://github.com/ypsitau/pico-jxgLABO/releases/latest/download/pico-jxgLABO.uf2)   |
    |Pico W   |[pico-w-jxgLABO.uf2](https://github.com/ypsitau/pico-jxgLABO/releases/latest/download/pico-w-jxgLABO.uf2) |
    |Pico 2   |[pico2-jxgLABO.uf2](https://github.com/ypsitau/pico-jxgLABO/releases/latest/download/pico2-jxgLABO.uf2)  |
    |Pico 2 W |[pico2-w-jxgLABO.uf2](https://github.com/ypsitau/pico-jxgLABO/releases/latest/download/pico2-w-jxgLABO.uf2)|
+
 2. Connect the USB cable while holding down the BOOTSEL button on the Pico board, and it will be recognized as USB mass storage. In many cases, it will be recognized as the `D:` drive
 3. Copy the downloaded UF2 file to the above drive. When copying is complete, the Pico board will automatically reboot and pico-jxgLABO will be available
 
